@@ -27,3 +27,27 @@ Example:
 We need a way to prove the user is logged in for every request.
 
 That’s where JWT comes in.
+
+#### jwt has three parts
+
+header, payload, signature
+
+header has json object containing
+
+{
+    alg : "SHA256",
+    type : "JWT"
+}
+
+payload has the json object as 
+
+{
+    userId : "syam"
+    email : "syam@gmail.com"
+}
+
+we dont store the password inside the payload
+
+finally signature is created using the header+payload+security key
+
+token is not modified and created by server only
